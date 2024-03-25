@@ -54,6 +54,7 @@ $$
 
 Where the skew matrix of a vector is:
 
+$$
 \begin{equation}
 [\vec{\mu}\theta]=\begin{bmatrix}
 0 & -z & y \\
