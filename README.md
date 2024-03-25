@@ -24,6 +24,14 @@ $$
 
 As can be seed, to describe a body in the space (position and attitude), the existented tools expend 16 elements in the case of HTMs, and 8 elements on the case of DQ. Nonetheless, for describing the position of an object is just requiered 3 elements (x,y,z coordinates), and for describing an orientation is also just requieres 3 elements (pitch, roll and yaw Euler angles). To sum up, it is requiered just 6 elements to describe an object in the space.   
 
+The reason of this fact is due to the fact that these pathematic tools always are operated with between them to represent transformations between frames of references, as in the case of robotic kinematics. This is achived with the property of multiplication of matrices and quaternions, whilst the Euler Angles don't have an operation that represent this transformations. This is the reason why 3 elements for representing orientation is not enough, and these angles must be converted in other operable elements such as rotation matrices or quaternions. Nevertheless, there is an expresion that depicts rotations and just uses 3 elements, this is the axis-angle representation:
+
+$$
+\begin{equation}
+A = \mu\times\theta
+\end{equation}
+$$
+
 ## Bibliography
 - Arimoto, S., Yoshida, M., Sekimoto, M., & Tahara, K. (2009). A Riemannian-Geometry Approach for Modeling and Control of Dynamics of Object Manipulation under Constraints. Journal of Robotics, 2009, 1–16. https://doi.org/10.1155/2009/892801
 - Calinon, S. (2020). Gaussians on riemannian manifolds: Applications for robot learning and adaptive control. IEEE Robotics and Automation Magazine, 27(2), 33–45. https://doi.org/10.1109/MRA.2020.2980548
