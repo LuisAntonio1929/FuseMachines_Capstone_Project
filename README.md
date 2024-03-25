@@ -148,11 +148,32 @@ $$
 \end{equation}
 $$
 
-Due to this limitation, this project aims to create a neural operator $N$, which is able to perform the non-conmutative addition ($*+$) between the elements X and Y, as is stated in the following equallity:
+Due to these limitation, this project aims to create a neural operator $N$, which is able to perform the non-conmutative addition between the elements X and Y, as is stated in the following equallity:
 
 $$
 \begin{equation}
-N(X,Y)=X *+ Y= Z
+N(X,Y)= Z
+\end{equation}
+$$
+
+To achieve this, the value of $Z$ is modeled as a linear combination of the first 6 elements of the BCH formula:
+
+$$
+\begin{equation}
+Z \approx X\alpha_1 + Y\alpha_2 + \frac{1}{2}[X,Y]\alpha_3 + \frac{1}{12}([X,[X,Y]]+[Y,[Y,X]])\alpha_4 + \frac{1}{24}[Y,[X,[X,Y]]]\alpha_5 + \frac{1}{720}([Y,[Y,[Y,[Y,X]]]]+[X,[X,[X,[X,Y]]]])\alpha_6
+\end{equation}
+$$
+
+Which can be written in matrix terms, where the rows of the matrix $M$ are the first 6 elements of the BCH formula:
+
+$$
+\begin{equation}
+Z \approx M \begin{bmatrix}
+\alpha_1 \\
+\alpha_2 \\
+\vdots \\
+\alpha_6 \\
+\end{bmatrix}
 \end{equation}
 $$
 
