@@ -56,7 +56,7 @@ R_{3,1} & R_{3,2} & R_{3,3} \\
 \end{equation}
 $$
 
-Where the skew matrix of a vector is:
+Where the skew matrix of the 3D vector is:
 
 $$
 \begin{equation}
@@ -76,7 +76,7 @@ e^{\vec{\mu}\theta+\epsilon\vec{v}}=cos(\theta)+\vec{\mu}sin(\theta)+((cos(\thet
 \end{equation}
 $$
 
-- For Rotation Matrices:
+- For Homogeneous Transformation Matrices:
 
 $$
 \begin{equation}
@@ -87,16 +87,24 @@ R & R\times\vec{v} \\
 \end{equation}
 $$
 
-Where the skew matrix of a vector is:
+Where the skew matrix of the 6D vector is:
 
 $$
 \begin{equation}
-[\vec{\mu}\theta]=\begin{bmatrix}
+[\vec{\mu}\theta;\vec{v}]=\begin{bmatrix}
 0 & -z & y & v_x\\
 z & 0 & x & v_y\\
 -y & -x & 0 & v_z\\
 0 & 0 & 0 & 0\\
 \end{bmatrix}
+\end{equation}
+$$
+
+It is important to notice that the exponential map is based on the Taylor Series:
+
+$$
+\begin{equation}
+e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
 \end{equation}
 $$
 
