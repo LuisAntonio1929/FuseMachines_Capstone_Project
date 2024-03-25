@@ -28,7 +28,38 @@ The reason of this fact is due to the fact that these pathematic tools always ar
 
 $$
 \begin{equation}
-A = \vect{\mu}\theta
+A = \vec{\mu}\theta
+\end{equation}
+$$
+
+Where $\vec{\mu}$ is a unit vector, and \theta is the angle of rotation around the unit axis. However, this representation also lacks in operations to transform reference frames. For this reason, this representation is useless and must be transformed into HTM o DQ in order to operate.
+
+On the other hand, the theory of Lie Algebra, and Riemann's Manifolds creates a relationship between the axis-angle representation with the HTM and DQ. It turns out that both HTM and DQ are the exponential map of the axis-angle notation as is shown in the following equation:
+
+$$
+\begin{equation}
+e^{\vec{\mu}\theta}=cos(\theta)+\vec{\mu}sin(\theta)=Q
+\end{equation}
+$$
+
+$$
+\begin{equation}
+e^{[\vec{\mu}\theta]}=\begin{bmatrix}
+R_{1,1} & R_{1,2} & R_{1,3} \\
+R_{2,1} & R_{2,2} & R_{2,3} \\
+R_{3,1} & R_{3,2} & R_{3,3} \\
+\end{bmatrix}
+\end{equation}
+$$
+
+Where the skew matrix of a vector is:
+
+\begin{equation}
+[\vec{\mu}\theta]=\begin{bmatrix}
+0 & -z & y \\
+z & 0 & x \\
+-y & -x & 0 \\
+\end{bmatrix}
 \end{equation}
 $$
 
