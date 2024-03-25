@@ -28,7 +28,7 @@ The reason of this fact is due to the fact that these pathematic tools always ar
 
 $$
 \begin{equation}
-A = \mu\times\theta
+A = \vect{\mu}\theta
 \end{equation}
 $$
 
