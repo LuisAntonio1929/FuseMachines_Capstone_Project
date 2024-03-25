@@ -40,7 +40,7 @@ On the other hand, the theory of Lie Algebra, and Riemann's Manifolds creates a 
 
 $$
 \begin{equation}
-e^{\vec{\mu}\theta}=cos(\theta)+\vec{\mu}sin(\theta)=Q
+e^{\vec{\mu}\theta}=cos(\theta)+\vec{\mu}sin(\theta)
 \end{equation}
 $$
 
@@ -64,6 +64,38 @@ $$
 0 & -z & y \\
 z & 0 & x \\
 -y & -x & 0 \\
+\end{bmatrix}
+\end{equation}
+$$
+
+- For Dual Quaternions:
+
+$$
+\begin{equation}
+e^{\vec{\mu}\theta+\epsilon\vec{v}}=cos(\theta)+\vec{\mu}sin(\theta)+((cos(\theta)+\vec{\mu}sin(\theta))\times\vec{v})\epsilon
+\end{equation}
+$$
+
+- For Rotation Matrices:
+
+$$
+\begin{equation}
+e^{[\vec{\mu}\theta;\vec{v}]}=\begin{bmatrix}
+R & R\times\vec{v} \\
+0 & 1 \\
+\end{bmatrix}
+\end{equation}
+$$
+
+Where the skew matrix of a vector is:
+
+$$
+\begin{equation}
+[\vec{\mu}\theta]=\begin{bmatrix}
+0 & -z & y & v_x\\
+z & 0 & x & v_y\\
+-y & -x & 0 & v_z\\
+0 & 0 & 0 & 0\\
 \end{bmatrix}
 \end{equation}
 $$
