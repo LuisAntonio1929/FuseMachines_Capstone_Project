@@ -26,3 +26,15 @@ As can be seed, to describe a body in the space (position and attitude), the exi
 
 ## Bibliography
 - Arimoto, S., Yoshida, M., Sekimoto, M., & Tahara, K. (2009). A Riemannian-Geometry Approach for Modeling and Control of Dynamics of Object Manipulation under Constraints. Journal of Robotics, 2009, 1–16. https://doi.org/10.1155/2009/892801
+- Calinon, S. (2020). Gaussians on riemannian manifolds: Applications for robot learning and adaptive control. IEEE Robotics and Automation Magazine, 27(2), 33–45. https://doi.org/10.1109/MRA.2020.2980548
+- Condurache, D., & Ciureanu, I. A. (2020). Baker-Campbell-Hausdorff-Dynkin formula for the lie algebra of rigid body displacements. Mathematics, 8(7), 1–19. https://doi.org/10.3390/math8071185
+- da Silva, I. N., Spatti, D. H., Flauzino, R. A., Liboni, L. H. B., & dos Reis Alves, S. F. (2016). Artificial neural networks: A practical course. In Artificial Neural Networks: A Practical Course (Vol. 50, Issue 2). Springer International Publishing. https://doi.org/10.1007/978-3-319-43162-8
+- DİKMENLİ, S. (2022). Forward & Inverse Kinematics Solution of 6-Dof Robots Those Have Offset & Spherical Wrists. Eurasian Journal of Science Engineering and Technology, 3(1), 14–28. https://doi.org/10.55696/ejset.1082648
+- Khan, G. M. (2018). Artificial neural network (ANNs). Studies in Computational Intelligence, 725(Sordo), 39–55. https://doi.org/10.1007/978-3-319-67466-7_4
+- Kumar, S. (2008). INTRODUCCION A LA ROBOTICA (Vol. 1).
+- Larotonda, G., & Varela, A. (2018). CURVAS Y SUPERFICIES. 105.
+- Li, Y., Zhao, Y., Zhang, T., & Li, T. (2019). Forward kinematics analysis and experiment of hybrid high-altitude board installation robot based on screw theory. Advances in Mechanical Engineering, 11(4), 1–11. https://doi.org/10.1177/1687814019846266
+- Pampano, A. (2014). Geodesicas en Variedades de Riemann.
+- Pham, D. T., Packianather, M. S., & Afify, A. A. (2008). Artificial neural networks. Computational Intelligence: For Engineering and Manufacturing, 67–92. https://doi.org/10.1007/0-387-37452-3_3
+- Radavelli, L. A., Simoni, R., Pieri, E. De, & Martins, D. (2012). A Comparative Study of the Kinematics of Robots Manipulators by Denavit-Hartenberg and Dual Quaternion. Mecánica Computacional, Multi-Body …, XXXI(September 2014), 13–16. http:%0Awww.joinville.ufsc.br/%0Awww.mtm.ufsc.br%0Ahttp://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:A+COMPARATIVE+STUDY+OF+THE+KINEMATICS+OF+ROBOTS+MANIPULATORS+BY+DENAVIT-HARTENBERG+AND+DUAL+quaternion#2
+- Siciliano, B., Sciavicco, L., Villani, L., & Oriolo, G. (2009). Robotics. Springer London. https://doi.org/10.1007/978-1-84628-642-1
