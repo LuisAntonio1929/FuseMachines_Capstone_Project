@@ -34,13 +34,17 @@ $$
 
 Where $\vec{\mu}$ is a unit vector, and \theta is the angle of rotation around the unit axis. However, this representation also lacks in operations to transform reference frames. For this reason, this representation is useless and must be transformed into HTM o DQ in order to operate.
 
-On the other hand, the theory of Lie Algebra, and Riemann's Manifolds creates a relationship between the axis-angle representation with the HTM and DQ. It turns out that both HTM and DQ are the exponential map of the axis-angle notation as is shown in the following equation:
+On the other hand, the theory of Lie Algebra, and Riemann's Manifolds creates a relationship between the axis-angle representation with the HTM and DQ. It turns out that both HTM and DQ are the exponential map of the axis-angle notation.
+
+- For Quaternions:
 
 $$
 \begin{equation}
 e^{\vec{\mu}\theta}=cos(\theta)+\vec{\mu}sin(\theta)=Q
 \end{equation}
 $$
+
+- For Rotation Matrices:
 
 $$
 \begin{equation}
