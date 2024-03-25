@@ -1,7 +1,7 @@
 # Neural Operator in Tangent Space for the Exponential Representation of Kinematics in Manipulator Robots
 
 In the realm of kinematics and motion modeling, certain mathematic tools are used to model rigid bodies.
-To beging mentioning, the Homogeneous Transformation Matrix (HTM), as shown in the equation below, is a $4\times4$ matrix composed by a rotational matrix $R$ and a translational vector $T$.
+To beging with, the Homogeneous Transformation Matrix (HTM), as shown in the equation below, is a $4\times4$ matrix composed by a rotational matrix $R$ and a translational vector $T$.
 
 $$
 \begin{equation}
@@ -23,3 +23,6 @@ DQ = q_r+ix_r+jy_r+kz_r+(q_d+ix_d+jy_d+kz_d)\epsilon
 $$
 
 As can be seed, to describe a body in the space (position and attitude), the existented tools expend 16 elements in the case of HTMs, and 8 elements on the case of DQ. Nonetheless, for describing the position of an object is just requiered 3 elements (x,y,z coordinates), and for describing an orientation is also just requieres 3 elements (pitch, roll and yaw Euler angles). To sum up, it is requiered just 6 elements to describe an object in the space.   
+
+## Bibliography
+- Arimoto, S., Yoshida, M., Sekimoto, M., & Tahara, K. (2009). A Riemannian-Geometry Approach for Modeling and Control of Dynamics of Object Manipulation under Constraints. Journal of Robotics, 2009, 1–16. https://doi.org/10.1155/2009/892801
