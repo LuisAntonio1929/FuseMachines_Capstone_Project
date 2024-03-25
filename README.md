@@ -48,7 +48,7 @@ $$
 
 $$
 \begin{equation}
-e^{[\vec{\mu}\theta]}=\begin{bmatrix}
+e^{skew(\vec{\mu}\theta)}=\begin{bmatrix}
 R_{1,1} & R_{1,2} & R_{1,3} \\
 R_{2,1} & R_{2,2} & R_{2,3} \\
 R_{3,1} & R_{3,2} & R_{3,3} \\
@@ -60,7 +60,7 @@ Where the skew matrix of the 3D vector is:
 
 $$
 \begin{equation}
-[\vec{\mu}\theta]=\begin{bmatrix}
+skew(\vec{\mu}\theta)=\begin{bmatrix}
 0 & -z & y \\
 z & 0 & x \\
 -y & -x & 0 \\
@@ -80,7 +80,7 @@ $$
 
 $$
 \begin{equation}
-e^{[\vec{r};\vec{v}]}=\begin{bmatrix}
+e^{skew(\vec{r};\vec{v})}=\begin{bmatrix}
 R & R\times\vec{v} \\
 0 & 1 \\
 \end{bmatrix}
@@ -91,7 +91,7 @@ Where the skew matrix of the 6D vector is:
 
 $$
 \begin{equation}
-[\vec{r};\vec{v}]=\begin{bmatrix}
+skew(\vec{r};\vec{v})=\begin{bmatrix}
 0 & -z & y & v_x\\
 z & 0 & x & v_y\\
 -y & -x & 0 & v_z\\
@@ -112,7 +112,7 @@ Now, given the exponential notation, this expresion can rise the following equal
 
 $$
 \begin{equation}
-e^{[\vec{r_1};\vec{v_1}]}e^{[\vec{r_2};\vec{v_2}]}=e^{[\vec{r_3};\vec{v_3}]}
+e^{X}e^{Y}=e^{Z}
 \end{equation}
 $$
 
@@ -120,7 +120,15 @@ Where:
 
 $$
 \begin{equation}
-[\vec{r_3};\vec{v_3}]\neq [\vec{r_1};\vec{v_1}] + [\vec{r_2};\vec{v_2}]
+Z\neq X + Y
+\end{equation}
+$$
+
+This is due the unconmutative property of multiplication in matrices and quaternions. Novertheless, there is an equation that finds this equallity which is known as the Baker-Campbell-Hausdorff formula:
+
+$$
+\begin{equation}
+Z = X + Y + \frac{1}{2}[X,Y] + \frac{1}{12}[X,[X,Y]] - \frac{1}{12}[Y,[X,Y]] + \cdots
 \end{equation}
 $$
 
