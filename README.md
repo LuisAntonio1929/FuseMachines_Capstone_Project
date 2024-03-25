@@ -124,11 +124,35 @@ Z\neq X + Y
 \end{equation}
 $$
 
-This is due the unconmutative property of multiplication in matrices and quaternions. Novertheless, there is an equation that finds this equallity which is known as the Baker-Campbell-Hausdorff formula:
+This is due the unconmutative property of multiplication in matrices and quaternions. Novertheless, there is an equation that finds this equallity which is known as the Baker-Campbell-Hausdorff formula (BCH):
 
 $$
 \begin{equation}
 Z = X + Y + \frac{1}{2}[X,Y] + \frac{1}{12}([X,[X,Y]]+[Y,[Y,X]]) - \frac{1}{24}[Y,[X,[X,Y]]] - \frac{1}{720}([Y,[Y,[Y,[Y,X]]]]+[X,[X,[X,[X,Y]]]]) + \cdots
+\end{equation}
+$$
+
+Where $[]$ is the Lie bracket:
+
+$$
+\begin{equation}
+[X,Y]=X\times Y-Y\times X
+\end{equation}
+$$
+
+Now, the BCH formula is a low rate convergence series, and just converge if the following condition is met:
+
+$$
+\begin{equation}
+|X|+|Y|<\frac{ln(2)}{2}
+\end{equation}
+$$
+
+Due to this limitation, this project aims to create a neural operator $N$, which is able to perform the non-conmutative addition ($*+$) between the elements X and Y, as is stated in the following equallity:
+
+$$
+\begin{equation}
+N(X,Y)=X *+ Y= Z
 \end{equation}
 $$
 
