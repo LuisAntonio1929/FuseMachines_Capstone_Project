@@ -28,7 +28,7 @@ The reason of this fact is due to the fact that these pathematic tools always ar
 
 $$
 \begin{equation}
-A = \vec{\mu}\theta
+\vec{r} = \vec{\mu}\theta
 \end{equation}
 $$
 
@@ -80,7 +80,7 @@ $$
 
 $$
 \begin{equation}
-e^{[\vec{\mu}\theta;\vec{v}]}=\begin{bmatrix}
+e^{[\vec{r};\vec{v}]}=\begin{bmatrix}
 R & R\times\vec{v} \\
 0 & 1 \\
 \end{bmatrix}
@@ -91,7 +91,7 @@ Where the skew matrix of the 6D vector is:
 
 $$
 \begin{equation}
-[\vec{\mu}\theta;\vec{v}]=\begin{bmatrix}
+[\vec{r};\vec{v}]=\begin{bmatrix}
 0 & -z & y & v_x\\
 z & 0 & x & v_y\\
 -y & -x & 0 & v_z\\
@@ -105,6 +105,22 @@ It is important to notice that the exponential map is based on the Taylor Series
 $$
 \begin{equation}
 e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+\end{equation}
+$$
+
+Now, given the exponential notation, this expresion can rise the following equallity:
+
+$$
+\begin{equation}
+e^{[\vec{r_1};\vec{v_1}]}e^{[\vec{r_2};\vec{v_2}]}=e^{[\vec{r_3};\vec{v_3}]}
+\end{equation}
+$$
+
+Where:
+
+$$
+\begin{equation}
+[\vec{r_3};\vec{v_3}]\neq [\vec{r_1};\vec{v_1}] + [\vec{r_2};\vec{v_2}]
 \end{equation}
 $$
 
