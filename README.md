@@ -1,7 +1,7 @@
 # Neural Operator in Tangent Space for the Exponential Representation of Kinematics in Manipulator Robots
 
 In the realm of kinematics and motion modeling, certain mathematic tools are used to model rigid bodies.
-To beging mentioning, the Homogeneous Transformation Matrix, as shown in the equation below, is a $4\cross4$ matrix composed by a rotational matrix $R$ and a translational vector $T$.
+To beging mentioning, the Homogeneous Transformation Matrix, as shown in the equation below, is a $4\times4$ matrix composed by a rotational matrix $R$ and a translational vector $T$.
 
 $$
 \begin{equation}
