@@ -128,7 +128,7 @@ This is due the unconmutative property of multiplication in matrices and quatern
 
 $$
 \begin{equation}
-Z = X + Y + \frac{1}{2}[X,Y] + \frac{1}{12}[X,[X,Y]] - \frac{1}{12}[Y,[X,Y]] + \cdots
+Z = X + Y + \frac{1}{2}[X,Y] + \frac{1}{12}([X,[X,Y]]+[Y,[Y,X]]) - \frac{1}{24}[Y,[X,[X,Y]]] - \frac{1}{720}([Y,[Y,[Y,[Y,X]]]]+[X,[X,[X,[X,Y]]]]) + \cdots
 \end{equation}
 $$
 
