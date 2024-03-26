@@ -177,6 +177,19 @@ Z \approx M \begin{bmatrix}
 \end{equation}
 $$
 
+Then, using the Moore–Penrose inverse, the alpha coefficients are found.
+
+$$
+\begin{equation}
+(MM^T)^-1M^TZ \approx \begin{bmatrix}
+\alpha_1 \\
+\alpha_2 \\
+\vdots \\
+\alpha_6 \\
+\end{bmatrix}
+\end{equation}
+$$
+
 ## Bibliography
 - Arimoto, S., Yoshida, M., Sekimoto, M., & Tahara, K. (2009). A Riemannian-Geometry Approach for Modeling and Control of Dynamics of Object Manipulation under Constraints. Journal of Robotics, 2009, 1–16. https://doi.org/10.1155/2009/892801
 - Calinon, S. (2020). Gaussians on riemannian manifolds: Applications for robot learning and adaptive control. IEEE Robotics and Automation Magazine, 27(2), 33–45. https://doi.org/10.1109/MRA.2020.2980548
