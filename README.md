@@ -60,10 +60,10 @@ Where the skew matrix of the 3D vector is:
 
 $$
 \begin{equation}
-skew(\vec{\mu}\theta)=\begin{bmatrix}
-0 & -z & y \\
-z & 0 & x \\
--y & -x & 0 \\
+skew(\vec{r})=\begin{bmatrix}
+0 & -r_z & r_y \\
+r_z & 0 & r_x \\
+-r_y & -r_x & 0 \\
 \end{bmatrix}
 \end{equation}
 $$
@@ -92,9 +92,9 @@ Where the skew matrix of the 6D vector is:
 $$
 \begin{equation}
 skew(\vec{r};\vec{v})=\begin{bmatrix}
-0 & -z & y & v_x\\
-z & 0 & x & v_y\\
--y & -x & 0 & v_z\\
+0 & -r_z & r_y & v_x\\
+r_z & 0 & r_x & v_y\\
+-r_y & -r_x & 0 & v_z\\
 0 & 0 & 0 & 0\\
 \end{bmatrix}
 \end{equation}
