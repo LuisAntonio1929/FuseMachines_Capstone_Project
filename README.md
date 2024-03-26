@@ -160,7 +160,7 @@ To achieve this, the value of $Z$ is modeled as a linear combination of the firs
 
 $$
 \begin{equation}
-Z \approx X\alpha_1 + Y\alpha_2 + \frac{1}{2}[X,Y]\alpha_3 + \frac{1}{12}([X,[X,Y]]+[Y,[Y,X]])\alpha_4 + \frac{1}{24}[Y,[X,[X,Y]]]\alpha_5 + \frac{1}{720}([Y,[Y,[Y,[Y,X]]]]+[X,[X,[X,[X,Y]]]])\alpha_6
+Z = X\alpha_1 + Y\alpha_2 + \frac{1}{2}[X,Y]\alpha_3 + \frac{1}{12}([X,[X,Y]]+[Y,[Y,X]])\alpha_4 + \frac{1}{24}[Y,[X,[X,Y]]]\alpha_5 + \frac{1}{720}([Y,[Y,[Y,[Y,X]]]]+[X,[X,[X,[X,Y]]]])\alpha_6
 \end{equation}
 $$
 
@@ -168,7 +168,7 @@ Which can be written in matrix terms, where the rows of the matrix $M$ are the f
 
 $$
 \begin{equation}
-Z \approx M \begin{bmatrix}
+Z = M \begin{bmatrix}
 \alpha_1 \\
 \alpha_2 \\
 \vdots \\
@@ -181,7 +181,7 @@ Then, using the Moore–Penrose inverse, the alpha coefficients are found.
 
 $$
 \begin{equation}
-(MM^T)^-1M^TZ \approx \begin{bmatrix}
+(MM^T)^{-1}M^TZ = \begin{bmatrix}
 \alpha_1 \\
 \alpha_2 \\
 \vdots \\
@@ -189,6 +189,64 @@ $$
 \end{bmatrix}
 \end{equation}
 $$
+
+The alpha coefficients are the pharameters the Neural Network ($N$) has to learn in order to operate the elements in the tangent space. As can be seen in the equation below, these coefficients are in function of just the rotational parts $\vec{\mu_1}\theta_1$ and $\vec{\mu_2}\theta_2$, given that as was ilustrated forelines, the translational part is just a multiplication of the exponential map of the rotational part with the translation vector.
+
+$$
+\begin{equation}
+N(\vec{\mu_1}\theta_1,\vec{\mu_2}\theta_2)=[\alpha_1,\alpha_2,\alpha_3,\alpha_4,\alpha_5,\alpha_6]
+\end{equation}
+$$
+
+For a number of 100 000 random points in the tangent space, the first 3 coefficients are ilutrated in the following chart, where the color is to distinguish whether it is positive or negative.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/527a5051-8328-43c0-be51-ac6b540a4b1f)
+
+In the same way, the other last 3 coefficients are ilustrated in the chart below, where the color indicates the dot product between the vectors $\vec{\mu_1}$ and $\vec{\mu_2}$.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/73fe7678-2858-4d94-86b9-872cdc0340e8)
+
+As can be seen, there is a perfect differenciation of two clusters with the first 3 coefficients, which means that there will be 2 kinds of Neural Networks, one to predict the positive cluster, while the other to predict the negative cluster. This is because the topology shown in the diagram would be so difficult for a single Neural Network.
+
+Continued, if it is ilustrated the relationship between the angles $\theta_1$ and $\theta_2$ in the x and y axes respectively, versus the dot product between the vectors $\vec{\mu_1}$ and $\vec{\mu_2}$. Then, the result is shown in the following ilustration.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/b1a949b1-7211-4dac-a53c-d0eeb11d995f)
+
+As can be noticed, the scatter seems to be symetric with respect the origin. If it is taken the square of the angles and then it is colored whether the coefficient 3 is negative or not, it can be seen a perfect differentiation.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/c9ddc88a-f75c-4ba6-b533-c84d97a3e26d)
+
+Therefore, the first Machine Learning method must be able to differentiate whether two vector in the tangent space lead to a positive coefficient or not. To accomplish this, it was used a Support Vector Machine method, whose input parameters where the two values of theta and the dot product of the two unit vectors. The Confusion Matrix of this model is displayed below.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/f7aa0177-f50d-41b8-9d26-fdf8daeb26be)
+
+Once the model is able to differ the sign. Then the next step is to create two Neural Networks for each manifold in positive and negative side. For the positive manifold it was used a Multilayer Perceptron of layers [50,200,50,10,50,200,50], while for the negative manifold it was used a Multilayer Perceptron of layers [100,100,100,100,100,100,100,100,100,100].
+
+The capability of the model to find the coefficients for the positive manifold are shown in the following chart.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/c54cbfb7-040a-4f62-900c-750b87973382)
+
+The same for the negative manifold.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/dc51bc64-09f4-4626-a8e3-d8d03bc10521)
+
+As can be seen, in all plots, the scatters are aligned with the diagonal of the frame.
+
+On the other hand, to evaluate the capacity of the entire model to compute the operation in the tangent space:
+
+$$
+\begin{equation}
+N(\theta_1,\theta_2,\vec{\mu_1}\dot\vec{\mu_2})=\hat{Z}
+\end{equation}
+$$
+
+It is ploted the cosine similatity of the predicted $\hat{Z}$ with the actual $Z$. Where it can be seen the score is high.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/a37c4a1d-8c15-4df4-902b-9cba09e090cc)
+
+The same is done with the difference of the norm of the predicted $\hat{Z}$ with the actual $Z$. Where it can be seen the error tents to be near the zero value in the z axis.
+
+![imagen](https://github.com/LuisAntonio1929/FuseMachines_Capstone_Project/assets/83978263/bf3c2a5a-71bf-448b-a24e-7a3cc1c17a4c)
 
 ## Bibliography
 - Arimoto, S., Yoshida, M., Sekimoto, M., & Tahara, K. (2009). A Riemannian-Geometry Approach for Modeling and Control of Dynamics of Object Manipulation under Constraints. Journal of Robotics, 2009, 1–16. https://doi.org/10.1155/2009/892801
