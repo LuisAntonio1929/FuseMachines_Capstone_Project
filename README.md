@@ -236,7 +236,7 @@ On the other hand, to evaluate the capacity of the entire model to compute the o
 
 $$
 \begin{equation}
-N(\theta_1,\theta_2,\vec{\mu_1}\cdot\vec{\mu_1})=\hat{Z}
+N(\theta_1,\theta_2,\vec{\mu_1}\cdot\vec{\mu_2})=\hat{Z}
 \end{equation}
 $$
 
