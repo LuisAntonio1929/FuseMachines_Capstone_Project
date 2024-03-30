@@ -160,7 +160,7 @@ To achieve this, the value of $Z$ is modeled as a linear combination of the firs
 
 $$
 \begin{equation}
-Z = X\alpha_1 + Y\alpha_2 + \frac{1}{2}[X,Y]\alpha_3 + \frac{1}{12}([X,[X,Y]]+[Y,[Y,X]])\alpha_4 + \frac{1}{24}[Y,[X,[X,Y]]]\alpha_5 + \frac{1}{720}([Y,[Y,[Y,[Y,X]]]]+[X,[X,[X,[X,Y]]]])\alpha_6
+Z = X\alpha_1 + Y\alpha_2 + [X,Y]\alpha_3 + [X,[X,Y]]\alpha_4+[Y,[Y,X]]\alpha_5 + [Y,[X,[X,Y]]]\alpha_6
 \end{equation}
 $$
 
